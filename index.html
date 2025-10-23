@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Importa a biblioteca de ícones Lucide (NOVO) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     
     <script>
         // Define as cores personalizadas com base na imagem
@@ -42,6 +44,22 @@
             background-color: #facc15;
             border-radius: 20px;
         }
+        /* Estilo para os ícones (NOVO) */
+        .icon-lg {
+            width: 28px;
+            height: 28px;
+            stroke-width: 2.5;
+        }
+        .icon-md {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2;
+        }
+         .icon-sm {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+        }
     </style>
 </head>
 <!-- Fundo com gradiente (alterado) -->
@@ -59,10 +77,25 @@
                 <!-- Navegação -->
                 <nav>
                     <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
-                        <!-- Botões de Navegação -->
-                        <li><button data-target="inicio" class="nav-btn active-nav-btn">Início</button></li>
-                        <li><button data-target="galeria" class="nav-btn">Galeria</button></li>
-                        <li><button data-target="alunos" class="nav-btn">Info. Alunos</button></li>
+                        <!-- Botões de Navegação com Ícones (NOVO) -->
+                        <li>
+                            <button data-target="inicio" class="nav-btn active-nav-btn flex items-center gap-2">
+                                <i data-lucide="home" class="icon-sm"></i>
+                                <span>Início</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="galeria" class="nav-btn flex items-center gap-2">
+                                <i data-lucide="image" class="icon-sm"></i>
+                                <span>Galeria</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="alunos" class="nav-btn flex items-center gap-2">
+                                <i data-lucide="users" class="icon-sm"></i>
+                                <span>Info. Alunos</span>
+                            </button>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -74,11 +107,19 @@
         
         <!-- Seção Início (Visível por padrão) -->
         <section id="inicio-content" class="content-section space-y-8">
-            <h2 class="text-3xl font-bold text-escola-yellow border-b-2 border-escola-yellow/30 pb-2">Sobre o Colégio</h2>
+            <!-- Título da seção com Ícone (NOVO) -->
+            <div class="flex items-center gap-3">
+                <i data-lucide="book-open" class="icon-lg text-escola-yellow"></i>
+                <h2 class="text-3xl font-bold text-escola-yellow border-b-2 border-escola-yellow/30 pb-2">Sobre o Colégio</h2>
+            </div>
             
             <!-- Cartão de conteúdo (estilo alterado) -->
             <div class="bg-blue-950/50 backdrop-blur-sm p-6 rounded-lg shadow-lg space-y-4 text-gray-200 text-lg leading-relaxed">
-                <h3 class="text-2xl font-semibold text-white">Ensino Integral: Uma Jornada Completa</h3>
+                <!-- Título do cartão com Ícone (NOVO) -->
+                <div class="flex items-center gap-2.5">
+                    <i data-lucide="clock-3" class="icon-md text-escola-yellow/80"></i>
+                    <h3 class="text-2xl font-semibold text-white">Ensino Integral: Uma Jornada Completa</h3>
+                </div>
                 <p>
                     O Colégio Professor William Madi é uma escola de ensino integral. Nossos alunos iniciam as atividades às 07:30 da manhã. Após as duas primeiras aulas, há um intervalo para lanche.
                 </p>
@@ -98,7 +139,11 @@
 
             <!-- Cartão de conteúdo (estilo alterado) -->
             <div class="bg-blue-950/50 backdrop-blur-sm p-6 rounded-lg shadow-lg">
-                 <h3 class="text-2xl font-semibold text-white mb-4">Nossos Clubes e Atividades</h3>
+                 <!-- Título do cartão com Ícone (NOVO) -->
+                <div class="flex items-center gap-2.5 mb-4">
+                     <i data-lucide="dice-5" class="icon-md text-escola-yellow/80"></i>
+                     <h3 class="text-2xl font-semibold text-white">Nossos Clubes e Atividades</h3>
+                </div>
                  <ul class="list-disc list-inside text-gray-200 text-lg space-y-2">
                     <!-- Descrição do Clube de Jogos alterada -->
                     <li>Clube de Jogos (jogos de tabuleiro, computadores)</li>
@@ -113,7 +158,11 @@
 
         <!-- Seção Galeria (Oculta) -->
         <section id="galeria-content" class="content-section hidden space-y-8">
-            <h2 class="text-3xl font-bold text-escola-yellow border-b-2 border-escola-yellow/30 pb-2">Galeria de Atividades</h2>
+            <!-- Título da seção com Ícone (NOVO) -->
+            <div class="flex items-center gap-3">
+                <i data-lucide="camera" class="icon-lg text-escola-yellow"></i>
+                <h2 class="text-3xl font-bold text-escola-yellow border-b-2 border-escola-yellow/30 pb-2">Galeria de Atividades</h2>
+            </div>
             <p class="text-lg text-gray-200">Veja momentos especiais registrados em nosso colégio. (Imagens de exemplo)</p>
             
             <!-- Grid de Fotos -->
@@ -147,14 +196,22 @@
 
         <!-- Seção Informações do Alunos (Oculta) -->
         <section id="alunos-content" class="content-section hidden space-y-8">
-            <!-- Título da seção alterado -->
-            <h2 class="text-3xl font-bold text-escola-yellow border-b-2 border-escola-yellow/30 pb-2">Área dedicada aos alunos</h2>
+            <!-- Título da seção com Ícone (NOVO) -->
+            <div class="flex items-center gap-3">
+                <i data-lucide="star" class="icon-lg text-escola-yellow"></i>
+                <!-- Título da seção alterado -->
+                <h2 class="text-3xl font-bold text-escola-yellow border-b-2 border-escola-yellow/30 pb-2">Área dedicada aos alunos</h2>
+            </div>
             <!-- Descrição da seção alterada -->
             <p class="text-lg text-gray-200">Nessa área terá textos, fotos de projetos, relatos, entre outras coisas que podem surgir.</p>
 
             <!-- Conteúdo de Exemplo Aluno (estilo do cartão alterado) -->
             <div class="bg-blue-950/50 backdrop-blur-sm p-6 rounded-lg shadow-lg space-y-4">
-                <h3 class="text-2xl font-semibold text-white">Aluno Destaque do Mês</h3>
+                <!-- Título do cartão com Ícone (NOVO) -->
+                <div class="flex items-center gap-2.5">
+                    <i data-lucide="trophy" class="icon-md text-escola-yellow/80"></i>
+                    <h3 class="text-2xl font-semibold text-white">Aluno Destaque do Mês</h3>
+                </div>
                 <p class="text-escola-yellow font-semibold text-xl">[Nome do Aluno(a) - Turma X]</p>
                 <p class="text-gray-200 text-lg">
                     [Aqui entra uma breve descrição do motivo do destaque: pode ser um projeto exemplar, uma conquista acadêmica, uma ação de liderança ou uma contribuição positiva para a comunidade escolar.]
@@ -163,7 +220,11 @@
             
             <!-- Conteúdo de Exemplo Aluno (estilo do cartão alterado) -->
             <div class="bg-blue-950/50 backdrop-blur-sm p-6 rounded-lg shadow-lg space-y-4">
-                <h3 class="text-2xl font-semibold text-white">Publicações e Projetos</h3>
+                <!-- Título do cartão com Ícone (NOVO) -->
+                <div class="flex items-center gap-2.5">
+                    <i data-lucide="pen-square" class="icon-md text-escola-yellow/80"></i>
+                    <h3 class="text-2xl font-semibold text-white">Publicações e Projetos</h3>
+                </div>
                 <p class="text-escola-yellow font-semibold text-xl">Projeto "Visão do Futuro" - 3º Ano B</p>
                 <p class="text-gray-200 text-lg">
                     [Descrição do projeto ou publicação dos alunos. Pode ser um link para um artigo, um vídeo, um poema ou os resultados de um trabalho de pesquisa.]
@@ -211,6 +272,9 @@
     <!-- JavaScript para a Navegação por Abas -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Renderiza os ícones do Lucide (NOVO)
+            lucide.createIcons();
+
             const navButtons = document.querySelectorAll('.nav-btn');
             const contentSections = document.querySelectorAll('.content-section');
 
@@ -245,9 +309,4 @@
 
 </body>
 </html>
-
-
-
-
-
 
