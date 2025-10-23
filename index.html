@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colégio Estadual Professor William Madi</title>
+    <!-- Carrega o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importa a fonte Poppins (alterada) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        // Define as cores personalizadas com base na imagem
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Um azul bem escuro e profundo, como na imagem
+                        'escola-blue': '#0a1a5b', 
+                        // Um amarelo/dourado vibrante, como o logo na imagem
+                        'escola-yellow': '#facc15', // (Tailwind yellow-400)
+                    },
+                    fontFamily: {
+                        // Define 'Poppins' como a fonte padrão (alterada)
+                        'sans': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo para a barra de rolagem (opcional, mas melhora a estética) */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-track {
+            background: #0a1a5b;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #facc15;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<!-- Fundo com gradiente (alterado) -->
+<body class="bg-gradient-to-b from-escola-blue to-[#06113f] text-gray-100 font-sans min-h-screen flex flex-col">
+
+    <!-- Cabeçalho (cor de fundo ajustada) -->
+    <header class="bg-[#06113f]/80 backdrop-blur-sm shadow-lg sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto px-4 py-5">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Título da Escola -->
+                <h1 class="text-2xl md:text-3xl font-bold text-center md:text-left text-escola-yellow mb-4 md:mb-0">
+                    Colégio Estadual Professor William Madi
+                </h1>
+                
+                <!-- Navegação -->
+                <nav>
+                    <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
+                        <!-- Botões de Navegação -->
+                        <li><button data-target="inicio" class="nav-btn active-nav-btn">Início</button></li>
+                        <li><button data-target="galeria" class="nav-btn">Galeria</button></li>
+                        <li><button data-target="alunos" class="nav-btn">Info. Alunos</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-8 md:py-12 w-full">
+        
+        <!-- Seção Início (Visível por padrão) -->
+        <section id="inicio-content" class="content-section space-y-8">
+            <h2 class="text-3xl font-bold text-escola-yellow border-b-2 border-escola-yellow/30 pb-2">Sobre o Colégio</h2>
+            
+            <!-- Cartão de conteúdo (estilo alterado) -->
+            <div class="bg-blue-950/50 backdrop-blur-sm p-6 rounded-lg shadow-lg space-y-4 text-gray-200 text-lg leading-relaxed">
+                <h3 class="text-2xl font-semibold text-white">Ensino Integral: Uma Jornada Completa</h3>
+                <p>
+                    O Colégio Professor William Madi é uma escola de ensino integral. Nossos alunos iniciam as atividades às 07:30 da manhã. Após as duas primeiras aulas, há um intervalo para lanche.
+                </p>
+                <p>
+                    O horário de almoço ocorre por volta das 12:00. Os alunos almoçam no refeitório e permanecem na escola, utilizando esse período livre para descansar, socializar, jogar ou praticar atividades físicas.
+                </p>
+                <p>
+                    Durante o almoço, também acontecem as atividades extracurriculares, como os clubes de jogos, filmes, beleza e robótica, permitindo que os alunos explorem novos interesses.
+                </p>
+                <p>
+                    Às 12:45, um sinal soa para que todos se organizem para as aulas da tarde, que começam às 13:00. Há um novo intervalo para lanche após as duas primeiras aulas da tarde, seguido pelas duas últimas aulas. As atividades do dia se encerram às 16:40. A secretaria da escola permanece em funcionamento até as 17:25.
+                </p>
+                <p>
+                    Nossa grade curricular inclui tanto as disciplinas da base comum quanto disciplinas diversificadas, como Projeto de Vida, Robótica e outras, preparando os alunos de forma completa para seus futuros.
+                </p>
+            </div>
+
+            <!-- Cartão de conteúdo (estilo alterado) -->
+            <div class="bg-blue-950/50 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+                 <h3 class="text-2xl font-semibold text-white mb-4">Nossos Clubes e Atividades</h3>
+                 <ul class="list-disc list-inside text-gray-200 text-lg space-y-2">
+                    <!-- Descrição do Clube de Jogos alterada -->
+                    <li>Clube de Jogos (jogos de tabuleiro, computadores)</li>
+                    <!-- Descrição do Clube de Filmes alterada -->
+                    <li>Clube de Filmes (onde os alunos têm um tempo para assistir a um filme)</li>
+                    <li>Clube de Beleza e Bem-estar</li>
+                    <li>Clube de Robótica e Programação</li>
+                    <li>Atividades Esportivas</li>
+                 </ul>
+            </div>
+        </section>
+
+        <!-- Seção Galeria (Oculta) -->
+        <section id="galeria-content" class="content-section hidden space-y-8">
+            <h2 class="text-3xl font-bold text-escola-yellow border-b-2 border-escola-yellow/30 pb-2">Galeria de Atividades</h2>
+            <p class="text-lg text-gray-200">Veja momentos especiais registrados em nosso colégio. (Imagens de exemplo)</p>
+            
+            <!-- Grid de Fotos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Imagem Placeholder 1 (estilo do cartão alterado) -->
+                <div class="bg-blue-950/50 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <!-- Texto da imagem alterado para Culminância -->
+                    <img src="https://placehold.co/600x400/0a1a5b/facc15?text=Culminância" alt="Culminância" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <!-- Título alterado para Culminância -->
+                        <h3 class="text-xl font-semibold text-white">Culminância</h3>
+                        <!-- Descrição alterada conforme solicitado -->
+                        <p class="text-gray-300 mt-1">Trabalhos realizados nas disciplinas da escola.</p>
+                    </div>
+                </div>
+                <!-- Imagem Placeholder 2 (estilo do cartão alterado) -->
+                <div class="bg-blue-950/50 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <!-- Texto da imagem alterado para Clubes -->
+                    <img src="https://placehold.co/600x400/0a1a5b/facc15?text=Clubes" alt="Clubes da Escola" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <!-- Título alterado para Clubes -->
+                        <h3 class="text-xl font-semibold text-white">Clubes</h3>
+                        <p class="text-gray-300 mt-1">Alunos em ação nos clubes da escola.</p>
+                    </div>
+                </div>
+                <!-- Cartão "Dia do Esporte" removido -->
+                <!-- Cartão "Apresentação Cultural" removido -->
+                <!-- Adicione mais placeholders conforme necessário -->
+            </div>
+        </section>
+
+        <!-- Seção Informações do Alunos (Oculta) -->
+        <section id="alunos-content" class="content-section hidden space-y-8">
+            <!-- Título da seção alterado -->
+            <h2 class="text-3xl font-bold text-escola-yellow border-b-2 border-escola-yellow/30 pb-2">Área dedicada aos alunos</h2>
+            <!-- Descrição da seção alterada -->
+            <p class="text-lg text-gray-200">Nessa área terá textos, fotos de projetos, relatos, entre outras coisas que podem surgir.</p>
+
+            <!-- Conteúdo de Exemplo Aluno (estilo do cartão alterado) -->
+            <div class="bg-blue-950/50 backdrop-blur-sm p-6 rounded-lg shadow-lg space-y-4">
+                <h3 class="text-2xl font-semibold text-white">Aluno Destaque do Mês</h3>
+                <p class="text-escola-yellow font-semibold text-xl">[Nome do Aluno(a) - Turma X]</p>
+                <p class="text-gray-200 text-lg">
+                    [Aqui entra uma breve descrição do motivo do destaque: pode ser um projeto exemplar, uma conquista acadêmica, uma ação de liderança ou uma contribuição positiva para a comunidade escolar.]
+                </p>
+            </div>
+            
+            <!-- Conteúdo de Exemplo Aluno (estilo do cartão alterado) -->
+            <div class="bg-blue-950/50 backdrop-blur-sm p-6 rounded-lg shadow-lg space-y-4">
+                <h3 class="text-2xl font-semibold text-white">Publicações e Projetos</h3>
+                <p class="text-escola-yellow font-semibold text-xl">Projeto "Visão do Futuro" - 3º Ano B</p>
+                <p class="text-gray-200 text-lg">
+                    [Descrição do projeto ou publicação dos alunos. Pode ser um link para um artigo, um vídeo, um poema ou os resultados de um trabalho de pesquisa.]
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé (cor de fundo ajustada) -->
+    <footer class="bg-[#06113f]/50 mt-12">
+        <div class="max-w-6xl mx-auto px-4 py-6 text-center text-gray-400 text-sm">
+            <p class="font-semibold text-gray-300 text-base mb-2">Colégio Estadual Professor William Madi</p>
+            <p>[Inserir Endereço da Escola], [Cidade] - [Estado]</p>
+            <p class="mt-2">© 2025. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- CSS Interno para estilos dos botões -->
+    <style>
+        .nav-btn {
+            @apply py-2 px-5 font-semibold text-escola-blue bg-escola-yellow rounded-lg shadow-md transition-all duration-300 ease-in-out;
+            @apply hover:bg-yellow-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-opacity-75;
+            opacity: 0.7;
+        }
+        
+        /* Classe para o botão ativo */
+        .active-nav-btn {
+            opacity: 1;
+            @apply bg-yellow-300 shadow-lg;
+            transform: scale(1.05);
+        }
+
+        /* Animação de fade-in para o conteúdo */
+        .content-section {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <!-- JavaScript para a Navegação por Abas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target');
+
+                    // 1. Atualiza os botões
+                    navButtons.forEach(btn => {
+                        btn.classList.remove('active-nav-btn');
+                        btn.style.opacity = '0.7';
+                    });
+                    button.classList.add('active-nav-btn');
+                    button.style.opacity = '1';
+
+                    // 2. Mostra/Esconde o conteúdo
+                    contentSections.forEach(section => {
+                        if (section.id === `${targetId}-content`) {
+                            section.classList.remove('hidden');
+                        } else {
+                            section.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // Garante que o botão 'Início' esteja ativo ao carregar
+            document.querySelector('.nav-btn[data-target="inicio"]').classList.add('active-nav-btn');
+            document.querySelector('.nav-btn[data-target="inicio"]').style.opacity = '1';
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
